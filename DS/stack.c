@@ -16,7 +16,7 @@ int push(int no)
         stack[top] = no;
     }
 }
-int pop(int no){
+int pop(){
     if (top==-1)
     {
         printf("\nStack is empty");
@@ -29,6 +29,9 @@ int pop(int no){
     
 }
 int peek(){
+    if(top==-1){
+        printf("Stack is empty");
+    }
     printf("%d is top most element of stack",stack[top]);
 }
 int display()
@@ -63,7 +66,7 @@ int main()
             push(no);
             break;
         case 2:
-            pop(no);
+            pop();
             break;
         case 3:
             peek();
